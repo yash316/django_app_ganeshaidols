@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %} About Us - WaterHub @DoorStep Water Delivery {% endblock %}
+{% block css %}
+#hero-bg {
+background-size: cover;
+background-position: center;
+<!--opacity: 0.6;-->
+}
+.about-heading{
+color: #FFC107;
+font-family: Helvetica Neue;
+}
+.lead{
+font-family:Candara;
+font-weight:400;
+}
+
+{% endblock %}
+
+{% block body %}
+{% load static %}
+
+<!-- Hero's section starts  -->
+<div id="hero-bg" class="hero-section p-md-5 mb-4 text-white rounded bg-dark"
+     style="background-image: url('{% static '/images/17e45f878782891a9fbe48c5fbaa7a2d.jpg' %}');">
+    <div class="col-md-6 px-0">
+        <h1 class="display-4 fst-italic text-white fw-bold">About Us</h1>
+    </div>
+</div>
+
+<!-- Hero's Section ends -->
+
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="{% static 'images/jpg.jpg' %}" class="d-block mx-lg-auto img-fluid"
+                 alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+            <h1 class="about-heading display-5 fw-bold lh-1 mb-3"><b>About Us</b></h1>
+            <p class="lead">We provide sustainable solutions to celebrate festivals with eco-friendly
+                Ganesh idols made from ‘Shadu Mati’ and ‘clay’ that is completely dissolvable in water. Not just that we
+                also create a hassle-free Pooja experience so that you connect to divinity and spirituality without the
+                troubles involved in handling issues regarding decoration, vidhi (rituals), prasad (offering) and more.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

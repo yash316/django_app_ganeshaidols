@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block title %} Contact Us - @bappaonline Eco Friendly Ganpati Idols {% endblock %}
+{% block css %}
+#hero-bg {
+background-size: cover;
+background-position: center;
+<!--opacity: 0.6;-->
+}
+.social{
+background-color: #385E63;
+font-family: Helvetica;
+color : white;
+}
+.head-title{
+color:#FFC107;
+font-family:Candara;
+}
+{% endblock %}
+
+
+{% block body %}
+{% load static %}
+<!-- Hero's section starts  -->
+<div id="hero-bg" class="hero-section p-md-5 mb-4 text-white rounded bg-dark"
+     style="background-image: url('{% static '/images/17e45f878782891a9fbe48c5fbaa7a2d.jpg' %}');">
+    <div class="col-md-6 px-0">
+        <h1 class="display-4 fst-italic text-white fw-bold">Contact Us</h1>
+    </div>
+</div>
+
+<!-- Hero's Section ends -->
+
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-5 text-center text-lg-start">
+            <div class="py-4">
+                <h1 class="fw-bold lh-1 head-title">Our Store</h1>
+
+                <div class="py-3">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-success py-3" aria-current="true"><b>Hours of Operation</b></li>
+                        <li class="list-group-item">Monday : 9:30 AM – 6:30 PM</li>
+                        <li class="list-group-item">Tuesday : 9:30 AM – 6:30 PM</li>
+                        <li class="list-group-item">Wednesday : 9:30 AM – 6:30 PM</li>
+                        <li class="list-group-item">Thursday : 9:30 AM – 6:30 PM</li>
+                        <li class="list-group-item">Friday : 9:30 AM – 6:30 PM</li>
+                        <li class="list-group-item">Saturday : 9:30 AM – 6:30 PM</li>
+                        <li class="list-group-item">Sunday : Closed</li>
+                    </ul>
+                </div>
+                <div class="py-2">
+                    <img src="{% static 'images/gmail.png' %}" height="40">
+                    mihir.bappaonline@gmail.com
+                </div>
+                <div class="py-2">
+                    <img src="{% static 'images/phone.png' %}" height="40">
+                    +91 9867732050 / 222 98685452
+                </div>
+                <div class="py-2 mb-2">
+                    <img src="{% static 'images/google-maps.png' %}" height="40">
+                    Devipada,Borivali,Mumbai-400068
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="col-md-10 mx-auto col-lg-7">
+            <h1 class="head-title fw-bolder mb-2">Leave us a Message</h1>
+            <form class="p-4 p-md-5 border rounded-3 bg-light" action="" method="post">
+                {% csrf_token %}
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" name="name" placeholder="name@example.com">
+                    <label>Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" name="email" placeholder="name@example.com">
+                    <label>Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="tel" class="form-control" name="phone" placeholder="Phone">
+                    <label>Phone</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" name="message" placeholder="Phone">
+                    <label>Message</label>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary submit_btn w-100 my-4">Send Message</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
